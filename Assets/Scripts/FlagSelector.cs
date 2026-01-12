@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
 
     // Questo metodo verrà chiamato da ogni pulsante-bandiera.
     // Passiamo il nome della texture della bandiera come parametro.
-    public void SelezionaBandiera(string nomeBandiera)
+    public void selectFlag(string nomeBandiera)
     {
         bandieraScelta = nomeBandiera;
         Debug.Log("Bandiera scelta: " + bandieraScelta); // Messaggio di controllo
