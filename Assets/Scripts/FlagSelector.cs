@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement; // Necessario per cambiare scena
 
 public class MenuManager : MonoBehaviour
@@ -7,6 +8,12 @@ public class MenuManager : MonoBehaviour
     // stringa per semplicità
     public static string bandieraScelta;
 
+    // immagini tutte bandiere
+    public Image[] bandiere;
+
+    // riferimento all'immagine della bandiera selezionata
+    private Image bandieraSelezionata;
+
     // Questo metodo verrà chiamato da ogni pulsante-bandiera.
     // Passiamo il nome della texture della bandiera come parametro.
     public void selectFlag(string nomeBandiera)
@@ -14,7 +21,20 @@ public class MenuManager : MonoBehaviour
         bandieraScelta = nomeBandiera;
         Debug.Log("Bandiera scelta: " + bandieraScelta); // Messaggio di controllo
 
-        // TODO: feedback visivo
+        foreach(Image bandiera in bandiere) {
+            Outline outline = bandiera.GetComponent<Outline>();
+
+            if (bandiera.name == nomeBandiera) {
+                // atttivo outline x la bandiera
+                if (outline != null) outline.enabled = true;
+
+                bandieraSelezionata = bandiera;
+
+            } else {
+                if (outline != null) outline.enabled = false;
+            }
+        }
+
     }
 
     // metodo per play
