@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 13926787}
   - component: {fileID: 13926786}
   - component: {fileID: 13926785}
+  - component: {fileID: 13926788}
   m_Layer: 5
   m_Name: Argentina
   m_TagString: Untagged
@@ -251,6 +252,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13926783}
   m_CullTransparentMesh: 1
+--- !u!114 &13926788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13926783}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &20740472
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +375,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c378d2349761eac9bc616b651539371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
+  bandiere:
+  - {fileID: 1909558954}
+  - {fileID: 783618455}
+  - {fileID: 1320224244}
+  - {fileID: 2106426137}
+  - {fileID: 1220707327}
+  - {fileID: 851248338}
+  - {fileID: 880195798}
+  - {fileID: 13926786}
 --- !u!4 &340138787
 Transform:
   m_ObjectHideFlags: 0
@@ -879,6 +904,7 @@ GameObject:
   - component: {fileID: 783618456}
   - component: {fileID: 783618455}
   - component: {fileID: 783618454}
+  - component: {fileID: 783618457}
   m_Layer: 5
   m_Name: Portugal
   m_TagString: Untagged
@@ -999,6 +1025,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783618452}
   m_CullTransparentMesh: 1
+--- !u!114 &783618457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783618452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &790691767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1264,7 @@ GameObject:
   - component: {fileID: 851248339}
   - component: {fileID: 851248338}
   - component: {fileID: 851248337}
+  - component: {fileID: 851248340}
   m_Layer: 5
   m_Name: England
   m_TagString: Untagged
@@ -1343,6 +1385,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851248335}
   m_CullTransparentMesh: 1
+--- !u!114 &851248340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851248335}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &880195795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1412,7 @@ GameObject:
   - component: {fileID: 880195799}
   - component: {fileID: 880195798}
   - component: {fileID: 880195797}
+  - component: {fileID: 880195800}
   m_Layer: 5
   m_Name: Brazil
   m_TagString: Untagged
@@ -1475,6 +1533,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880195795}
   m_CullTransparentMesh: 1
+--- !u!114 &880195800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880195795}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1220707324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1560,7 @@ GameObject:
   - component: {fileID: 1220707328}
   - component: {fileID: 1220707327}
   - component: {fileID: 1220707326}
+  - component: {fileID: 1220707329}
   m_Layer: 5
   m_Name: France
   m_TagString: Untagged
@@ -1607,6 +1681,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220707324}
   m_CullTransparentMesh: 1
+--- !u!114 &1220707329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220707324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1320224241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1708,7 @@ GameObject:
   - component: {fileID: 1320224245}
   - component: {fileID: 1320224244}
   - component: {fileID: 1320224243}
+  - component: {fileID: 1320224246}
   m_Layer: 5
   m_Name: Italy
   m_TagString: Untagged
@@ -1739,6 +1829,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320224241}
   m_CullTransparentMesh: 1
+--- !u!114 &1320224246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320224241}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1503306923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,6 +1989,7 @@ GameObject:
   - component: {fileID: 1909558955}
   - component: {fileID: 1909558954}
   - component: {fileID: 1909558953}
+  - component: {fileID: 1909558956}
   m_Layer: 5
   m_Name: Spain
   m_TagString: Untagged
@@ -2004,6 +2110,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909558951}
   m_CullTransparentMesh: 1
+--- !u!114 &1909558956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909558951}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2106426134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2137,7 @@ GameObject:
   - component: {fileID: 2106426138}
   - component: {fileID: 2106426137}
   - component: {fileID: 2106426136}
+  - component: {fileID: 2106426139}
   m_Layer: 5
   m_Name: Germany
   m_TagString: Untagged
@@ -2136,6 +2258,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106426134}
   m_CullTransparentMesh: 1
+--- !u!114 &2106426139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106426134}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: 3}
+  m_UseGraphicAlpha: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
