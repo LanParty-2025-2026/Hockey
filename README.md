@@ -22,4 +22,6 @@ Choose your team (without name, the name will be the class attending)
 
 
 
-
+# Getioen dei punti 
+In base al rislutato, numeri di goal segnati, goal subiti, si possono assegnare dei punti alla squadra.
+# TODO: punteggi
