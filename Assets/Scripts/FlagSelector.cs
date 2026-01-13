@@ -28,6 +28,7 @@ public class MenuManager : MonoBehaviour
         }
 
         // carica scena di gioco
+        Debug.Log("Caricamento scena Game con bandiera: " + bandieraScelta);
         SceneManager.LoadScene("Game");
     }
 }
