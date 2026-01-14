@@ -8,8 +8,8 @@ public class FieldLinesDrawer : MonoBehaviour
     public Material lineMaterial;
     
     [Header("Dimensioni Campo")]
-    public float fieldWidth = 10f;
-    public float fieldHeight = 6f;
+    public float fieldWidth = 16f;
+    public float fieldHeight = 10f;
     
     void Start()
     {
@@ -20,24 +20,18 @@ public class FieldLinesDrawer : MonoBehaviour
     {
         // Cerchio centrale
         DrawCircle("CerchioCentrale", Vector3.zero, 1f, 50);
-        
         // Punto centrale (cerchio piccolo)
         DrawCircle("PuntoCentrale", Vector3.zero, 0.1f, 20);
-        
         // Arco area rigore sinistra
-        Vector3 leftPenaltySpot = new Vector3(-fieldWidth/2 + 1.5f, 0, 0);
+        Vector3 leftPenaltySpot = new Vector3(-5.1f, 0, 0);
         DrawArc("ArcoSinistra", leftPenaltySpot, 1f, -53f, 53f, 30);
-        
         // Arco area rigore destra
-        Vector3 rightPenaltySpot = new Vector3(fieldWidth/2 - 1.5f, 0, 0);
+        Vector3 rightPenaltySpot = new Vector3(5.1f, 0, 0);
         DrawArc("ArcoDestra", rightPenaltySpot, 1f, 127f, 233f, 30);
-        
         // Dischetto rigore sinistro
         DrawCircle("DischettoSinistro", leftPenaltySpot, 0.08f, 20);
-        
         // Dischetto rigore destro
         DrawCircle("DischettoDestro", rightPenaltySpot, 0.08f, 20);
-        
         // Cerchi d'angolo (opzionali)
         DrawCornerCircles();
     }
