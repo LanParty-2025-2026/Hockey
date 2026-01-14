@@ -11,7 +11,10 @@ the play button.
 
 # Actual game
 The scene is called Game.
-
+I drawed all the field by myself, so all of the vertical / horizontal lines and also the circles.
+TODO: maybe add a pretty pattern to the grass, so it's smoother.
+I putted all of the lines on level 1, so the grass is level 0, the lines level 1 and then
+the other things, like the ball, player will have their own level.
 
 # Basic AI system to play against the player
 ![](image.png)
