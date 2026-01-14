@@ -1156,8 +1156,8 @@ MonoBehaviour:
   lineColor: {r: 1, g: 1, b: 1, a: 1}
   lineWidth: 0.1
   lineMaterial: {fileID: 2100000, guid: d278dd4650ab51327aeebdc7f820e802, type: 2}
-  fieldWidth: 10
-  fieldHeight: 6
+  fieldWidth: 16
+  fieldHeight: 10
 --- !u!1 &1405707427
 GameObject:
   m_ObjectHideFlags: 0
