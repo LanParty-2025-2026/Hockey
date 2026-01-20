@@ -173,18 +173,18 @@ MonoBehaviour:
   - {fileID: 4024361084433873515, guid: c506f15d395c3eb2f9f8d95623d3e335, type: 3}
   - {fileID: 2284997179997396379, guid: 98aad0d76e737f8409aad91ccf8c8e36, type: 3}
   numGiocatoriPerSquadra: 4
-  playerScale: 0.2
+  playerScale: 0.25
   playerSortingOrder: 10
   posizioniSquadraFrancia:
-  - {x: -3.5, y: 3}
-  - {x: -5.5, y: 0}
-  - {x: -2, y: 0}
-  - {x: -3.5, y: -3}
+  - {x: -7, y: 3}
+  - {x: -10, y: 0}
+  - {x: -4, y: 0}
+  - {x: -7, y: -3}
   posizioniSquadraAvversaria:
-  - {x: 5, y: 2}
-  - {x: 5, y: 0}
-  - {x: 5, y: -2}
-  - {x: 3, y: 1}
+  - {x: 7, y: 3}
+  - {x: 10, y: 0}
+  - {x: 4, y: 0}
+  - {x: 7, y: -3}
   colliderRadius: 0.5
 --- !u!1 &146193385
 GameObject:
