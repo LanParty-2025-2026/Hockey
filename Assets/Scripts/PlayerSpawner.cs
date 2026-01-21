@@ -10,11 +10,11 @@ public class PlayerSpawner : MonoBehaviour
     public float playerScale = 0.2f;
     public int playerSortingOrder = 10;
     
-    [Header("Posizioni Squadra Francia (Sinistra)")]
-    public Vector2[] posizioniSquadraFrancia;
+    [Header("Posizioni Squadra Sinistra (Giocatore)")]
+    public Vector2[] posizioniSquadraSinistra;
     
-    [Header("Posizioni Squadra Avversaria (Destra)")]
-    public Vector2[] posizioniSquadraAvversaria;
+    [Header("Posizioni Squadra Destra (Francia)")]
+    public Vector2[] posizioniSquadraDestra;
     
     [Header("Collider Settings")]
     public float colliderRadius = 0.5f;
@@ -27,7 +27,7 @@ public class PlayerSpawner : MonoBehaviour
         if (string.IsNullOrEmpty(bandieraScelta))
         {
             Debug.LogWarning("Nessuna bandiera selezionata! Uso bandiera default.");
-            bandieraScelta = "France_0"; // Default
+            bandieraScelta = "Ireland"; // Default
         }
         
         Debug.Log("Creazione giocatori con bandiera: " + bandieraScelta);
@@ -36,29 +36,29 @@ public class PlayerSpawner : MonoBehaviour
         Sprite spriteBandieraScelta = TrovaBandiera(bandieraScelta);
         Sprite spriteBandieraFrancia = TrovaBandiera("France");
         
-        // Crea squadra Francia (sempre a sinistra)
-        CreaSquadra("France_0", spriteBandieraFrancia, posizioniSquadraFrancia);
+        // Crea squadra del giocatore (sinistra) con la bandiera scelta
+        CreaSquadra(bandieraScelta, spriteBandieraScelta, posizioniSquadraSinistra, true);
         
-        // Crea squadra avversaria (a destra)
-        CreaSquadra(bandieraScelta, spriteBandieraScelta, posizioniSquadraAvversaria);
+        // Crea squadra Francia (destra) - non giocabile
+        CreaSquadra("France", spriteBandieraFrancia, posizioniSquadraDestra, false);
     }
     
     Sprite TrovaBandiera(string nomeBandiera)
     {
-        nomeBandiera = nomeBandiera + "_0";
+        string nomeBandieraConSuffix = nomeBandiera + "_0";
         foreach (Sprite sprite in bandiere)
         {
-            if (sprite.name == nomeBandiera)
+            if (sprite.name == nomeBandieraConSuffix)
             {
                 return sprite;
             }
         }
         
-        Debug.LogWarning("Bandiera " + nomeBandiera + " non trovata! Uso la prima disponibile.");
+        Debug.LogWarning("Bandiera " + nomeBandieraConSuffix + " non trovata! Uso la prima disponibile.");
         return bandiere.Length > 0 ? bandiere[0] : null;
     }
     
-    void CreaSquadra(string nomeSquadra, Sprite bandiera, Vector2[] posizioni)
+    void CreaSquadra(string nomeSquadra, Sprite bandiera, Vector2[] posizioni, bool isGiocabile)
     {
         // Crea un GameObject contenitore per la squadra
         GameObject squadraContainer = new GameObject("Team_" + nomeSquadra);
@@ -67,11 +67,11 @@ public class PlayerSpawner : MonoBehaviour
         // Crea ogni giocatore
         for (int i = 0; i < Mathf.Min(numGiocatoriPerSquadra, posizioni.Length); i++)
         {
-            CreaPedina(nomeSquadra, i + 1, bandiera, posizioni[i], squadraContainer.transform);
+            CreaPedina(nomeSquadra, i + 1, bandiera, posizioni[i], squadraContainer.transform, isGiocabile);
         }
     }
     
-    void CreaPedina(string squadra, int numero, Sprite bandiera, Vector2 posizione, Transform parent)
+    void CreaPedina(string squadra, int numero, Sprite bandiera, Vector2 posizione, Transform parent, bool isGiocabile)
     {
         // Crea GameObject
         GameObject pedina = new GameObject("Player_" + squadra + "_" + numero);
@@ -94,5 +94,10 @@ public class PlayerSpawner : MonoBehaviour
         rb.gravityScale = 0;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        
+        // Aggiungi il controller
+        PlayerController controller = pedina.AddComponent<PlayerController>();
+        // La squadra di sinistra (quella scelta) è giocabile
+        controller.isSquadraGiocabile = isGiocabile;
     }
 }
